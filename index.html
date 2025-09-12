@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Rashid Hussain | Full Stack .NET Developer (ASP.NET Core, C#, SQL Server, Reporting)" />
+  <meta name="author" content="Rashid Hussain" />
+  <title>Rashid Hussain - Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/logo.ico">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!-- AOS (scroll animations) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-aos-easing="ease" data-aos-duration="500" data-aos-delay="0">
+
+  <!-- Intro Overlay -->
+<div id="intro-overlay" 
+     style="position:fixed;
+            top:0; left:0; width:100%; height:100%;
+            background: url('images/gge.gif') no-repeat center center;
+            background-size: cover;
+            color:#fff;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            z-index:9999;">
+  <h1 id="intro-text" style="font-size:3rem;font-weight:bold;margin-bottom:20px;opacity:0;">
+    Welcome to Rashid Hussain Portfolio
+  </h1>
+  <p id="intro-subtext" style="font-size:1.5rem;font-weight:500;opacity:0;"></p>
+</div>
+
+
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+        <img src="images/logoa.jpg" alt="logo" style="height:34px; margin-right:8px"> Rashid Hussain
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+          <!-- <li class="nav-item"><a class="nav-link" href="#why-choose-me">Why Choose Me</a></li> -->
+          <li class="nav-item"><a class="nav-link" href="#get-started">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+<section id="home" class="hero d-flex justify-content-center align-items-center" style="min-height:80vh;">
+  <div class="container text-center">
+    <div>
+      <br><br><br><br><br><br><br><br><br><br>
+      <h1 class="display-4 fw-bold text-orange hover-orange">Hi, I'm Rashid Hussain</h1>
+      <p id="typingText" class="lead fw-bold text-orange mb-3 hover-orange"></p>
+    </div>
+<br><br><br><br><br><br>
+    <div class="mt-4">
+      <img src="images/aa.gif" alt="hero" width="80" class="animate-fade-down">
+    </div>
+  </div>
+</section>
+
+<script>
+  // 2 lines ke liye \n use karen
+  const text = "Full-Stack .NET Developer — ASP.NET Core,\n VB.Net,C#, SQL Server, Reporting";
+  const typingText = document.getElementById("typingText");
+
+  let index = 0;
+
+  function typeEffect() {
+    if (index < text.length) {
+      if (text.charAt(index) === "\n") {
+        typingText.innerHTML += "<br>"; 
+      } else {
+        typingText.innerHTML += text.charAt(index);
+      }
+      index++;
+      setTimeout(typeEffect, 100); 
+    } else {
+      // pause and restart
+      setTimeout(() => {
+        typingText.innerHTML = "";
+        index = 0;
+        typeEffect();
+      }, 2000);
+    }
+  }
+
+  // Start animation
+  typeEffect();
+</script>
+
+  <!-- Skill logos (marquee style) -->
+<section class="py-4 bg-black">
+  <div class="container">
+    <h2 class="text-center mb-4 fw-bold">My Skills</h2>
+    <div class="skill-wrapper">
+      <div class="skill-track">
+        <!-- Logos -->
+        <img src="images/dotnet.png" alt=".NET" class="skill-logo">
+        <img src="images/csharp.png" alt="C#" class="skill-logo">
+        <img src="images/sqlserver.png" alt="SQL Server" class="skill-logo">
+        <img src="images/vbnet.png" alt="VB.NET" class="skill-logo">
+        <img src="images/bootstrap.png" alt="Bootstrap" class="skill-logo">
+        <img src="images/ajax.png" alt="AJAX" class="skill-logo">
+        <img src="images/crystal.png" alt="Crystal Reports" class="skill-logo">
+        <img src="images/ssrs.png" alt="SSRS" class="skill-logo">
+
+        <!-- Repeat for smooth infinite scroll -->
+        <img src="images/dotnet.png" alt=".NET" class="skill-logo">
+        <img src="images/csharp.png" alt="C#" class="skill-logo">
+        <img src="images/sqlserver.png" alt="SQL Server" class="skill-logo">
+        <img src="images/vbnet.png" alt="VB.NET" class="skill-logo">
+        <img src="images/bootstrap.png" alt="Bootstrap" class="skill-logo">
+        <img src="images/ajax.png" alt="AJAX" class="skill-logo">
+        <img src="images/crystal.png" alt="Crystal Reports" class="skill-logo">
+        <!-- <img src="images/ssrs.png" alt="SSRS" class="skill-logo"> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- About -->
+  <section id="about" class="py-5 bg-dark text-white">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-4">About Me</h2>
+      <div class="row align-items-center">
+        <div class="col-md-3 text-center mb-4 mb-md-0" data-aos="fade-up">
+          <img src="images/profile.jpg" alt="Rashid Hussain" class="img-fluid rounded-circle profile-image shadow-lg">
+        </div>
+        <div class="col-md-9" data-aos="fade-up">
+          <p>
+            Driven and detail-oriented <strong>VB.NET and ASP.NET Core Developer</strong> with over <strong>5 years</strong> of hands-on experience.
+            Currently at <strong>Nizam Sons Pvt. Ltd.</strong> (since 2021) leading digital transformation by migrating legacy VB.NET systems,
+            optimizing SQL performance, and delivering enterprise applications.
+          </p>
+
+          <div class="row mt-4">
+            <div class="col-md-4">
+              <h6 class="fw-bold"><i class="fas fa-code me-2"></i>Frontend</h6>
+              <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>Bootstrap, Kendo UI</li>
+                <li>AJAX, jQuery</li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h6 class="fw-bold"><i class="fas fa-server me-2"></i>Backend</h6>
+              <ul>
+                <li>ASP.NET Core, MVC</li>
+                <li>C#, VB.NET, ADO.NET, EF</li>
+                <li>SQL Server & Reporting (SSRS, Crystal)</li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h6 class="fw-bold"><i class="fas fa-tools me-2"></i>Tools</h6>
+              <ul>
+                <li>Git</li>
+                <li>Power BI</li>
+                <li>IIS</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+<section id="services" class="py-5 bg-dark text-light">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">
+      <i class="fas fa-cogs me-2 text-warning"></i> My Services
+    </h2>
+    <div class="row g-4 justify-content-center">
+      
+      <!-- Service 1 -->
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="card service-card h-100 text-center p-4 bg-dark border-0 shadow-lg rounded-4 hover-shadow">
+          <div class="icon-box bg-warning rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width:90px; height:90px;">
+            <i class="fas fa-code fa-2x text-dark me-2 service-icon"></i>
+            <img src="images/NET_Core_Logo.svg.png" alt="ASP.NET Core" style="width:40px;">
+          </div>
+          <h5 class="fw-bold text-white">Software Development</h5>
+          <p class="text-light small">
+            ASP.NET Core web apps, legacy migration, and application architecture.
+          </p>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card service-card h-100 text-center p-4 bg-dark border-0 shadow-lg rounded-4 hover-shadow">
+          <div class="icon-box bg-warning rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width:90px; height:90px;">
+            <i class="fas fa-database fa-2x text-dark me-2 service-icon"></i>
+            <img src="images/database.png" alt="Database" style="width:40px;">
+          </div>
+          <h5 class="fw-bold text-white">Database Management</h5>
+          <p class="text-light small">
+            SQL Server design, stored procedures optimization, and ETL workflows.
+          </p>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card service-card h-100 text-center p-4 bg-dark border-0 shadow-lg rounded-4 hover-shadow">
+          <div class="icon-box bg-warning rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width:90px; height:90px;">
+            <i class="fas fa-chart-line fa-2x text-dark me-2 service-icon"></i>
+            <img src="images/bi.png" alt="Reporting" style="width:40px;">
+          </div>
+          <h5 class="fw-bold text-white">Reporting & BI</h5>
+          <p class="text-light small">
+            SSRS, Crystal Reports and Power BI dashboards for real-time insights.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Projects -->
+<section id="projects" class=" py-5 bg-dark text-whitefade-up">
+  <div class="container py-5">
+    <h2 class="section-title text-center fw-bold mb-5">Project Highlights</h2>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- Project 1 -->
+      <div class="col-md-4">
+        <div class="project-card">
+          <img src="images/login.png" alt="Export Software Login"
+               class="project-img" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="images/login.png">
+          <p>Export Software Login: Secure access for users to manage shipments and invoices.</p>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-md-4">
+        <div class="project-card">
+          <img src="images/dashboard.png" alt="Export Software Dashboard"
+               class="project-img" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="images/dashboard.png">
+          <p>Export Software Dashboard: Real-time overview of shipments, invoices, and documents.</p>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-md-4">
+        <div class="project-card">
+          <img src="images/performa.png" alt="Export Software Performa Invoice"
+               class="project-img" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="images/performa.png">
+          <p>Performa Invoice: Generate and manage invoices efficiently for all shipments.</p>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="col-md-4">
+        <div class="project-card">
+          <img src="images/invoice.png" alt="Export Software Invoice"
+               class="project-img" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="images/invoice.png">
+          <p>Invoice Management: Create, track, and manage invoices for shipments seamlessly.</p>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="col-md-4">
+        <div class="project-card">
+          <img src="images/prc.png" alt="Export Software PRC Data Entry"
+               class="project-img" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="images/prc.png">
+          <p>PRC Data Entry: Efficiently enter and manage shipment and export-related data.</p>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="col-md-4">
+        <div class="project-card">
+          <img src="images/dataentry.png" alt="Export Software Data Entry"
+               class="project-img" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="images/dataentry.png">
+          <p>Data Entry: Enter and manage all export shipment details efficiently.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Modal for Image Zoom -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content bg-transparent border-0">
+      <div class="modal-body p-0">
+        <img src="" alt="Zoomed Image" id="modalImg" class="img-fluid rounded">
+      </div>
+      <div class="modal-footer border-0 justify-content-center">
+        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CSS -->
+<style>
+.project-card {
+  min-width: 250px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+}
+.project-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+.project-card p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4;
+}
+</style>
+
+<!-- JS -->
+<script>
+  // Image modal functionality
+  const projectImages = document.querySelectorAll(".project-img");
+  const modalImg = document.getElementById("modalImg");
+
+  projectImages.forEach(img => {
+    img.addEventListener("click", () => {
+      modalImg.src = img.dataset.bsImg;
+    });
+  });
+</script>
+
+
+  <!-- Resume -->
+<section id="resume" class="py-5 bg-dark text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-4 text-white">
+      <i class="fas fa-file-alt me-2 text-warning"></i> My Resume
+    </h2>
+    <p class="text-light mb-4">
+      Download a full resume for my experience, projects, and references.
+    </p>
+    <a href="Images/Rashid_Hussain_Resume.pdf" class="btn btn-warning btn-lg fw-bold shadow" target="_blank">
+      <i class="fas fa-download me-2"></i> Download Resume
+    </a>
+  </div>
+</section>
+
+
+  <!-- Testimonials -->
+<!-- Why Choose Me Section -->
+<section id="why-choose-me" class="py-5 bg-dark text-light">
+  <div class="container">
+<h2 class="text-center fw-bold mb-5 text-white" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.8);">
+  <i class="fas fa-star text-warning me-2"></i> Why Choose Me
+</h2>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- Card 1 -->
+      <div class="col-md-3" data-aos="fade-up">
+        <div class="card h-100 text-center p-4 bg-dark border-0 shadow-lg rounded-4 hover-shadow">
+          <div class="icon-box bg-warning rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+               style="width:90px; height:90px;">
+            <i class="fas fa-laptop-code fa-2x text-dark"></i>
+          </div>
+          <h5 class="fw-bold text-white">Expertise & Experience</h5>
+          <p class="text-light small">
+            With 6+ years of experience, I build high-quality, scalable, and efficient applications.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 text-center p-4 bg-dark border-0 shadow-lg rounded-4 hover-shadow">
+          <div class="icon-box bg-warning rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+               style="width:90px; height:90px;">
+            <i class="fas fa-check-circle fa-2x text-dark"></i>
+          </div>
+          <h5 class="fw-bold text-white">Commitment to Quality</h5>
+          <p class="text-light small">
+            My work is defined by clean code, best practices, and high-performance solutions.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="card h-100 text-center p-4 bg-dark border-0 shadow-lg rounded-4 hover-shadow">
+          <div class="icon-box bg-warning rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+               style="width:90px; height:90px;">
+            <i class="fas fa-lightbulb fa-2x text-dark"></i>
+          </div>
+          <h5 class="fw-bold text-white">Problem-Solving Mindset</h5>
+          <p class="text-light small">
+            I excel at troubleshooting, optimizing, and delivering efficient solutions.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="card h-100 text-center p-4 bg-dark border-0 shadow-lg rounded-4 hover-shadow">
+          <div class="icon-box bg-warning rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+               style="width:90px; height:90px;">
+            <i class="fas fa-smile-beam fa-2x text-dark"></i>
+          </div>
+          <h5 class="fw-bold text-white">Client Satisfaction</h5>
+          <p class="text-light small">
+            100+ happy clients and a track record of delivering beyond expectations.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact / Get Started -->
+<section id="get-started" class="py-5 bg-dark text-light text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-3 text-warning">
+      <i class="fas fa-paper-plane me-2 text-warning"></i> Let's Get Started
+    </h2>
+    <p class="text-light">Ready to build something? Reach me via:</p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap mt-3">
+      <a class="btn btn-outline-light" href="https://wa.me/923024652810" target="_blank">
+        <i class="fab fa-whatsapp me-2"></i>WhatsApp
+      </a>
+      <a class="btn btn-outline-light" href="mailto:rrashidhussain190@gmail.com">
+        <i class="fas fa-envelope me-2"></i>Email
+      </a>
+      <a class="btn btn-outline-light" href="https://www.linkedin.com/in/rashid-hussain-901101103/" target="_blank">
+        <i class="fab fa-linkedin me-2"></i>LinkedIn
+      </a>
+      <a class="btn btn-outline-light" href="https://github.com/Rashid-Hussain14300" target="_blank">
+        <i class="fab fa-github me-2"></i>GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="py-4 bg-dark text-center text-white">
+    <div class="container">
+      <small>© <span id="year"></span> Rashid Hussain | All Rights Reserved</small>
+    </div>
+  </footer>
+
+  <!-- Project modal (carousel) -->
+  <div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="projectModalTitle"></h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div id="projectCarouselInner" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" id="projectCarouselInnerItems"></div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarouselInner" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#projectCarouselInner" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+          <p id="projectImageDesc" class="mt-3 text-center"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <script> AOS.init(); document.getElementById('year').textContent = new Date().getFullYear(); </script>
+
+<!-- Intro Overlay -->
+
+  
+</body>
+</html>
