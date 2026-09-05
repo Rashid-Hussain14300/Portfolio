@@ -1,56 +1,55 @@
-const navToggle = document.getElementById('navToggle');
-const mainNav = document.getElementById('mainNav');
 
-navToggle?.addEventListener('click', () => {
-  const open = mainNav.classList.toggle('open');
-  navToggle.setAttribute('aria-expanded', String(open));
-  navToggle.innerHTML = open ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
-});
-
-document.querySelectorAll('#mainNav a[href^="#"]').forEach(link => {
-  link.addEventListener('click', () => {
-    mainNav.classList.remove('open');
-    navToggle?.setAttribute('aria-expanded', 'false');
-    if (navToggle) navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
-  });
-});
-
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
-
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
+const header = document.getElementById('siteHeader');
+const progress = document.getElementById('scrollProgress');
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
 const lightbox = document.getElementById('lightbox');
 const lightboxImage = document.getElementById('lightboxImage');
 const lightboxClose = document.getElementById('lightboxClose');
 
-document.querySelectorAll('.project-image').forEach(button => {
-  button.addEventListener('click', () => {
-    const card = button.closest('.project-card');
-    const image = card?.dataset.image || button.querySelector('img')?.src;
-    if (!image) return;
-    lightboxImage.src = image;
-    lightbox.classList.add('open');
-    lightbox.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
+document.getElementById('year').textContent = new Date().getFullYear();
+
+function onScroll(){
+  const y = window.scrollY;
+  header.classList.toggle('scrolled', y > 25);
+  const doc = document.documentElement;
+  const total = doc.scrollHeight - doc.clientHeight;
+  progress.style.width = (total ? (y / total) * 100 : 0) + '%';
+}
+window.addEventListener('scroll', onScroll, {passive:true});
+onScroll();
+
+menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      e.target.classList.add('in');
+      observer.unobserve(e.target);
+    }
+  });
+}, {threshold:.12});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+function openPreview(src, alt){
+  lightboxImage.src = src;
+  lightboxImage.alt = alt || 'Project preview';
+  lightbox.classList.add('open');
+  lightbox.setAttribute('aria-hidden','false');
+  document.body.classList.add('no-scroll');
+}
+function closePreview(){
+  lightbox.classList.remove('open');
+  lightbox.setAttribute('aria-hidden','true');
+  document.body.classList.remove('no-scroll');
+}
+document.querySelectorAll('[data-preview]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const img = btn.querySelector('img');
+    openPreview(btn.dataset.preview, img ? img.alt : 'Project preview');
   });
 });
-
-function closeLightbox(){
-  lightbox.classList.remove('open');
-  lightbox.setAttribute('aria-hidden', 'true');
-  lightboxImage.src = '';
-  document.body.style.overflow = '';
-}
-
-lightboxClose?.addEventListener('click', closeLightbox);
-lightbox?.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && lightbox?.classList.contains('open')) closeLightbox(); });
-
-document.getElementById('year').textContent = new Date().getFullYear();
+lightboxClose.addEventListener('click', closePreview);
+lightbox.addEventListener('click', e => { if(e.target === lightbox) closePreview(); });
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closePreview(); });
