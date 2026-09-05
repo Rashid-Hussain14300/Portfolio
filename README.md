@@ -1,4 +1,4 @@
-# Datta Engineering Associates Website
+# Rashid Hussain
 
 This is a static GitHub Pages-ready website.
 
