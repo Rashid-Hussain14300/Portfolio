@@ -1,43 +1,9 @@
-const year = document.getElementById('year');
-if (year) year.textContent = new Date().getFullYear();
-
-const menuBtn = document.getElementById('menuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-
-if (menuBtn && mobileMenu) {
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('show');
-    menuBtn.textContent = mobileMenu.classList.contains('show') ? '✕' : '☰';
-  });
-
-  mobileMenu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      mobileMenu.classList.remove('show');
-      menuBtn.textContent = '☰';
-    });
-  });
-}
-
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
-});
-
-const revealObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.08 });
-
-document.querySelectorAll('.expertise-card, .project, .timeline article, .tech-grid span').forEach(el => {
-  el.classList.add('reveal');
-  revealObserver.observe(el);
-});
+const header=document.querySelector('.site-header');
+const menuBtn=document.querySelector('.menu-btn');
+const nav=document.querySelector('.nav-links');
+window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>20));
+menuBtn?.addEventListener('click',()=>nav.classList.toggle('open'));
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+document.getElementById('year').textContent=new Date().getFullYear();
