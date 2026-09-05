@@ -2,286 +2,265 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Rashid Hussain - Senior VB.NET and Oracle NetSuite Reporting Developer">
-  <title>Rashid Hussain | Oracle NetSuite & .NET Developer</title>
-  <link rel="stylesheet" href="portfolio-v2.css?v=20260905">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Rashid Hussain — Senior .NET & Oracle NetSuite Reporting Developer portfolio">
+  <meta name="author" content="Rashid Hussain">
+  <title>Rashid Hussain | Senior .NET & NetSuite Developer</title>
+  <link rel="icon" href="images/logoa.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="page-glow glow-one"></div>
+  <div class="page-glow glow-two"></div>
 
-<header class="topbar">
-  <div class="wrap nav-wrap">
-    <a class="logo" href="#home">
-      <span class="logo-box">RH</span>
-      <span class="logo-copy">
-        <b>Rashid Hussain</b>
-        <small>Software Engineer</small>
-      </span>
-    </a>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Rashid Hussain home">
+        <span class="brand-logo"><img src="images/logoa.jpg" alt="Rashid Hussain logo"></span>
+        <span>
+          <strong>Rashid Hussain</strong>
+          <small>Software Engineer</small>
+        </span>
+      </a>
 
-    <nav class="nav-links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="#skills">Expertise</a>
-      <a href="#work">Work</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
 
-    <a class="cv-btn" href="Rashid_Hussain_CV.pdf" target="_blank">Download CV</a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+      <nav class="nav" id="mainNav">
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-cta" href="Rashid_Hussain_CV.pdf" target="_blank" rel="noopener">Resume <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-backdrop" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="status-dot"></span> Available for impactful software & ERP projects</div>
+          <h1>Building reliable <span>enterprise software</span> and decision-ready reporting.</h1>
+          <p class="hero-lead">Senior VB.NET / Full Stack .NET Developer and Oracle NetSuite Reporting Developer focused on ERP dashboards, SuiteScript, SuiteQL, Telerik/TRDP, SQL Server and modern business applications.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View my work <i class="fa-solid fa-arrow-right"></i></a>
+            <a class="btn btn-secondary" href="Rashid_Hussain_CV.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-lines"></i> View Resume</a>
+          </div>
+
+          <div class="hero-stats">
+            <div><strong>5+ yrs</strong><span>Enterprise development</span></div>
+            <div><strong>2021–Now</strong><span>Libermann International</span></div>
+            <div><strong>ERP + .NET</strong><span>Reporting & applications</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal delay-1">
+          <div class="hero-image-card">
+            <img src="images/profile.jpg" alt="Rashid Hussain" class="hero-profile">
+            <div class="hero-badge badge-top"><i class="fa-solid fa-code"></i><span><small>Core Stack</small>.NET • SQL • NetSuite</span></div>
+            <div class="hero-badge badge-bottom"><i class="fa-solid fa-chart-line"></i><span><small>Focus</small>ERP Reporting & Dashboards</span></div>
+          </div>
+          <div class="code-panel">
+            <div class="code-panel-head"><span></span><span></span><span></span><em>reporting-suite.js</em></div>
+            <pre><code><b>const</b> expertise = {
+  suiteScript: <span>'2.x'</span>,
+  suiteQL: <span>true</span>,
+  dashboards: <span>'KPI + Grid + Charts'</span>,
+  dotNet: <span>'ASP.NET Core / VB.NET'</span>
+};</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="brand-strip" aria-label="Technical skills">
+      <div class="container">
+        <div class="marquee">
+          <div class="marquee-track">
+            <span><img src="images/dotnet.png" alt=".NET"> .NET</span>
+            <span><img src="images/csharp.png" alt="C#"> C#</span>
+            <span><img src="images/sqlserver.png" alt="SQL Server"> SQL Server</span>
+            <span><img src="images/vbnet.png" alt="VB.NET"> VB.NET</span>
+            <span><img src="images/bootstrap.png" alt="Bootstrap"> Bootstrap</span>
+            <span><img src="images/ajax.png" alt="AJAX"> AJAX</span>
+            <span><img src="images/crystal.png" alt="Crystal Reports"> Crystal Reports</span>
+            <span><img src="images/ssrs.png" alt="SSRS"> SSRS</span>
+            <span><img src="images/dotnet.png" alt=".NET"> .NET</span>
+            <span><img src="images/csharp.png" alt="C#"> C#</span>
+            <span><img src="images/sqlserver.png" alt="SQL Server"> SQL Server</span>
+            <span><img src="images/vbnet.png" alt="VB.NET"> VB.NET</span>
+            <span><img src="images/bootstrap.png" alt="Bootstrap"> Bootstrap</span>
+            <span><img src="images/ajax.png" alt="AJAX"> AJAX</span>
+            <span><img src="images/crystal.png" alt="Crystal Reports"> Crystal Reports</span>
+            <span><img src="images/ssrs.png" alt="SSRS"> SSRS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container split-grid">
+        <div class="section-heading reveal">
+          <span class="kicker">About me</span>
+          <h2>I turn complex business processes into clean, usable software.</h2>
+        </div>
+        <div class="about-copy reveal delay-1">
+          <p>I work across enterprise .NET development and Oracle NetSuite ERP reporting. My day-to-day work includes SuiteScript 2.x Suitelets, SuiteQL reporting, professional PDF/HTML reports, Telerik/TRDP, interactive dashboards, KPI views, filters, grids and export solutions.</p>
+          <p>I also work on legacy VB.NET modernization, ASP.NET Core applications, SQL Server development, performance tuning and business reporting where data accuracy and usability matter.</p>
+          <div class="tag-list">
+            <span>Oracle NetSuite ERP</span><span>SuiteScript 2.x</span><span>SuiteQL</span><span>ASP.NET Core</span><span>VB.NET</span><span>C#</span><span>SQL Server</span><span>Telerik / TRDP</span><span>Power BI</span><span>Kendo UI</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section surface" id="expertise">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <span class="kicker">What I do</span>
+          <h2>Enterprise-focused technical expertise</h2>
+          <p>From backend business logic to dashboards and production-grade reporting.</p>
+        </div>
+
+        <div class="expertise-grid">
+          <article class="expert-card reveal">
+            <div class="expert-icon"><i class="fa-solid fa-cubes"></i></div>
+            <h3>NetSuite ERP Engineering</h3>
+            <p>SuiteScript 2.x Suitelets, SuiteQL, MRP / purchasing / production / inventory reporting and process follow-up solutions.</p>
+            <ul><li>SuiteScript & Suitelets</li><li>SuiteQL optimization</li><li>ERP process reporting</li></ul>
+          </article>
+          <article class="expert-card reveal delay-1">
+            <div class="expert-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <h3>.NET Application Development</h3>
+            <p>Business applications with ASP.NET Core, C#, VB.NET and structured backend architecture.</p>
+            <ul><li>ASP.NET Core</li><li>VB.NET / C#</li><li>Legacy modernization</li></ul>
+          </article>
+          <article class="expert-card reveal delay-2">
+            <div class="expert-icon"><i class="fa-solid fa-chart-pie"></i></div>
+            <h3>Reporting & Dashboards</h3>
+            <p>Professional dashboards with KPI cards, grids, charts, filters, pagination, global search and export capabilities.</p>
+            <ul><li>Telerik / TRDP</li><li>Kendo-style grids</li><li>Excel / CSV export</li></ul>
+          </article>
+          <article class="expert-card reveal">
+            <div class="expert-icon"><i class="fa-solid fa-database"></i></div>
+            <h3>Database & Performance</h3>
+            <p>SQL Server and SuiteQL query tuning with focus on correct joins, deduplication and scalable reporting.</p>
+            <ul><li>SQL Server / SSRS</li><li>Query optimization</li><li>Data accuracy</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="kicker">Experience</span>
+          <h2>Professional journey</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-date">2021 — Present</div>
+            <div class="timeline-content">
+              <div class="role-top"><div><h3>Senior VB.NET / Oracle NetSuite Reporting Developer</h3><p>Libermann International</p></div><span class="current-pill">Current</span></div>
+              <p>Developing enterprise .NET and Oracle NetSuite reporting solutions across MRP, purchasing, production, inventory, material follow-up and business process reporting. Building SuiteScript 2.x Suitelets, SuiteQL reports, dashboards, KPI views, professional PDF/HTML reports and Telerik/TRDP reports.</p>
+              <div class="mini-tags"><span>NetSuite</span><span>SuiteScript 2.x</span><span>SuiteQL</span><span>Telerik/TRDP</span><span>ASP.NET Core</span><span>SQL Server</span></div>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-date">2019</div>
+            <div class="timeline-content"><h3>Web Developer — E-Rozgaar Training Program</h3><p>GC Women University Sialkot</p><p>Worked on responsive web projects using HTML, CSS and JavaScript while strengthening practical development, teamwork and problem-solving skills.</p></div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-date">2016</div>
+            <div class="timeline-content"><h3>Web Developer — Ayan Group of Companies</h3><p>Lahore</p><p>Worked on web-based solutions, coding, testing and debugging to support responsive and user-friendly business websites.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section surface" id="projects">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <span class="kicker">Selected work</span>
+          <h2>Project highlights</h2>
+          <p>Existing project screenshots from your <strong>images</strong> folder are used directly.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card featured reveal" data-image="images/dashboard.png">
+            <button class="project-image" aria-label="Open dashboard screenshot"><img src="images/dashboard.png" alt="Export software dashboard"><span class="image-open"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span></button>
+            <div class="project-body"><div class="project-meta"><span>Dashboard</span><span>Enterprise UI</span></div><h3>Export Management Dashboard</h3><p>Operational dashboard providing a consolidated view of shipment, invoice and document-related information.</p></div>
+          </article>
+          <article class="project-card reveal delay-1" data-image="images/login.png">
+            <button class="project-image" aria-label="Open login screenshot"><img src="images/login.png" alt="Export software login"><span class="image-open"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span></button>
+            <div class="project-body"><div class="project-meta"><span>Authentication</span></div><h3>Secure Application Login</h3><p>Clean sign-in experience for controlled access to export management modules.</p></div>
+          </article>
+          <article class="project-card reveal" data-image="images/performa.png">
+            <button class="project-image" aria-label="Open performa screenshot"><img src="images/performa.png" alt="Performa invoice"><span class="image-open"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span></button>
+            <div class="project-body"><div class="project-meta"><span>ERP Workflow</span></div><h3>Performa Invoice Module</h3><p>Structured interface for entering and managing export invoice information efficiently.</p></div>
+          </article>
+          <article class="project-card reveal delay-1" data-image="images/invoice.png">
+            <button class="project-image" aria-label="Open invoice screenshot"><img src="images/invoice.png" alt="Invoice management"><span class="image-open"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span></button>
+            <div class="project-body"><div class="project-meta"><span>Business App</span></div><h3>Invoice Management</h3><p>Business-focused invoice workflow designed for efficient entry, tracking and operational use.</p></div>
+          </article>
+          <article class="project-card reveal" data-image="images/prc.png">
+            <button class="project-image" aria-label="Open PRC screenshot"><img src="images/prc.png" alt="PRC data entry"><span class="image-open"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span></button>
+            <div class="project-body"><div class="project-meta"><span>Data Entry</span></div><h3>PRC Management</h3><p>Dedicated interface for accurate PRC-related data entry and operational processing.</p></div>
+          </article>
+          <article class="project-card reveal delay-1" data-image="images/dataentry.png">
+            <button class="project-image" aria-label="Open data entry screenshot"><img src="images/dataentry.png" alt="Export data entry"><span class="image-open"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></span></button>
+            <div class="project-body"><div class="project-meta"><span>Operations</span></div><h3>Export Data Entry</h3><p>Detailed entry screen for managing export shipment and supporting business data.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section education-section">
+      <div class="container education-grid">
+        <div class="section-heading reveal"><span class="kicker">Education</span><h2>Academic background</h2></div>
+        <div class="education-list reveal delay-1">
+          <div><span>2013–2017</span><h3>BS Software Engineering</h3><p>The Superior College Lahore</p></div>
+          <div><span>2011–2013</span><h3>FSc Pre-Engineering</h3><p>BISE Gujranwala</p></div>
+          <div><span>2009–2010</span><h3>Matric Science</h3><p>BISE Gujranwala</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-card reveal">
+        <div><span class="kicker">Contact</span><h2>Have a software, reporting or ERP challenge?</h2><p>Reach out for .NET development, Oracle NetSuite reporting, dashboards, SQL optimization or enterprise software work.</p></div>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:rrashidhussain190@gmail.com"><i class="fa-regular fa-envelope"></i> Email me</a>
+          <a class="btn btn-secondary" href="https://wa.me/923024652810" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        </div>
+        <div class="social-row">
+          <a href="https://www.linkedin.com/in/rashid-hussain-901101103/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+          <a href="https://github.com/Rashid-Hussain14300" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+          <span><i class="fa-solid fa-location-dot"></i> Sialkot, Pakistan</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner"><span>© <span id="year"></span> Rashid Hussain</span><a href="#top">Back to top <i class="fa-solid fa-arrow-up"></i></a></div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image"><i class="fa-solid fa-xmark"></i></button>
+    <img id="lightboxImage" src="" alt="Project preview">
   </div>
-</header>
 
-<main>
-  <section class="hero" id="home">
-    <div class="wrap hero-grid">
-      <div class="hero-copy">
-        <div class="status"><span></span> ORACLE NETSUITE · .NET · ENTERPRISE REPORTING</div>
-
-        <p class="kicker">SENIOR SOFTWARE / REPORTING DEVELOPER</p>
-        <h1>Rashid <span>Hussain</span></h1>
-        <h2>Senior VB.NET & Oracle NetSuite Reporting Developer</h2>
-
-        <p class="hero-text">
-          I build enterprise .NET applications, Oracle NetSuite ERP reports and professional
-          dashboards for MRP, purchasing, production, inventory and operational reporting.
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn primary" href="#work">View My Work</a>
-          <a class="btn secondary" href="#contact">Contact Me</a>
-        </div>
-
-        <div class="quick-info">
-          <div><small>LOCATION</small><strong>Sialkot, Punjab</strong></div>
-          <div><small>EXPERIENCE</small><strong>5+ Years</strong></div>
-          <div><small>CURRENT FOCUS</small><strong>Oracle NetSuite ERP</strong></div>
-        </div>
-      </div>
-
-      <div class="hero-photo">
-        <div class="photo-frame">
-          <img src="images/profile.jpeg" alt="Rashid Hussain">
-          <div class="photo-caption">
-            <b>Rashid Hussain</b>
-            <span>Oracle NetSuite & .NET Developer</span>
-          </div>
-        </div>
-
-        <div class="tech-badge badge-one">
-          <span class="badge-icon">N</span>
-          <div><b>Oracle NetSuite</b><small>SuiteScript 2.x · SuiteQL</small></div>
-        </div>
-
-        <div class="tech-badge badge-two">
-          <span class="badge-icon blue">▦</span>
-          <div><b>ERP Reporting</b><small>PDF · TRDP · Dashboards</small></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-light" id="about">
-    <div class="wrap">
-      <p class="section-label">01 / ABOUT</p>
-      <div class="title-row">
-        <h3>Enterprise development with a <span>business-first approach.</span></h3>
-      </div>
-
-      <div class="about-grid">
-        <p class="about-lead">
-          Senior VB.NET / Full Stack .NET Developer with more than five years of experience
-          in enterprise development, reporting and system modernization.
-        </p>
-        <div class="about-copy">
-          <p>
-            Currently working at <b>Libermann International</b> on Oracle NetSuite ERP reporting
-            and dashboard development using SuiteScript 2.x, SuiteQL, Suitelets, PDF/HTML reports
-            and Telerik/TRDP.
-          </p>
-          <p>
-            My reporting work covers MRP, purchasing, production, inventory, material follow-up,
-            SLA/process reporting and operational dashboards with strong focus on accuracy and performance.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-dark" id="skills">
-    <div class="wrap">
-      <p class="section-label">02 / EXPERTISE</p>
-      <div class="title-row">
-        <h3>Development, reporting and <span>business intelligence.</span></h3>
-      </div>
-
-      <div class="cards">
-        <article class="card">
-          <div class="card-icon">01</div>
-          <h4>Oracle NetSuite Development</h4>
-          <p>SuiteScript 2.x, Suitelets and SuiteQL for ERP reporting and workflow solutions.</p>
-          <div class="tags"><span>SuiteScript 2.x</span><span>SuiteQL</span><span>Suitelets</span></div>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">02</div>
-          <h4>Professional ERP Reporting</h4>
-          <p>NetSuite PDF/HTML, Telerik/TRDP and SSRS reports for business-ready documents.</p>
-          <div class="tags"><span>PDF/HTML</span><span>TRDP</span><span>SSRS</span></div>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">03</div>
-          <h4>Interactive Dashboards</h4>
-          <p>KPI views, charts, Kendo-style grids, search, filters, pagination and exports.</p>
-          <div class="tags"><span>Kendo UI</span><span>KPI</span><span>Excel/CSV</span></div>
-        </article>
-
-        <article class="card">
-          <div class="card-icon">04</div>
-          <h4>.NET Enterprise Development</h4>
-          <p>VB.NET, ASP.NET Core, C#, SQL Server and modernization of legacy applications.</p>
-          <div class="tags"><span>VB.NET</span><span>ASP.NET Core</span><span>SQL Server</span></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-light" id="work">
-    <div class="wrap">
-      <p class="section-label">03 / SELECTED WORK</p>
-      <div class="title-row">
-        <h3>Reporting solutions designed for <span>real operations.</span></h3>
-      </div>
-
-      <div class="work-grid">
-        <article class="work-card work-featured">
-          <div class="mock dashboard">
-            <div class="mock-title"><b>MRP Working Dashboard</b><span>LIVE REPORTING</span></div>
-            <div class="mock-kpis">
-              <i><small>Total Demand</small><b>1,248</b></i>
-              <i><small>On Time</small><b>86%</b></i>
-              <i><small>Pending</small><b>174</b></i>
-              <i><small>Delayed</small><b>52</b></i>
-            </div>
-            <div class="bars">
-              <i style="height:48%"></i><i style="height:78%"></i><i style="height:61%"></i>
-              <i style="height:91%"></i><i style="height:55%"></i><i style="height:72%"></i>
-            </div>
-          </div>
-          <div class="work-copy">
-            <small>ORACLE NETSUITE · SUITEQL · DASHBOARD</small>
-            <h4>MRP & Operational Reporting</h4>
-            <p>MRP demand, purchasing, production, inventory, SLA/status and operational dashboard reporting.</p>
-          </div>
-        </article>
-
-        <article class="work-card">
-          <div class="mock document">
-            <div class="paper">
-              <div class="paper-head"><b>BUSINESS REPORT</b><span>NETSUITE</span></div>
-              <i></i><i></i><i></i><i></i><i></i>
-            </div>
-          </div>
-          <div class="work-copy">
-            <small>PDF · HTML · TRDP</small>
-            <h4>Professional ERP Reports</h4>
-            <p>Structured PDF/HTML and Telerik/TRDP documents with business-ready layouts.</p>
-          </div>
-        </article>
-
-        <article class="work-card">
-          <div class="mock data-grid">
-            <div class="grid-toolbar"></div>
-            <i></i><i></i><i></i><i></i><i></i>
-          </div>
-          <div class="work-copy">
-            <small>KENDO UI · REPORTING UX</small>
-            <h4>Interactive Data Grids</h4>
-            <p>Cascading filters, global search, pagination, progressive loading and Excel/CSV export.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-dark" id="experience">
-    <div class="wrap">
-      <p class="section-label">04 / EXPERIENCE</p>
-      <div class="title-row"><h3>Professional <span>journey.</span></h3></div>
-
-      <div class="timeline">
-        <article>
-          <time>2021 — PRESENT</time>
-          <div>
-            <span class="current">CURRENT</span>
-            <h4>Senior VB.NET / Oracle NetSuite Reporting Developer</h4>
-            <h5>Libermann International</h5>
-            <p>
-              Oracle NetSuite ERP reporting using SuiteScript 2.x, SuiteQL, Suitelets,
-              PDF/HTML reporting, Telerik/TRDP and interactive dashboards. Work includes
-              MRP demand vs PO, process/SLA, material receive/QA, work order and operational reporting.
-            </p>
-          </div>
-        </article>
-
-        <article>
-          <time>2019</time>
-          <div>
-            <h4>Web Developer</h4>
-            <h5>E-Rozgaar Training Program</h5>
-            <p>HTML, CSS, JavaScript and responsive web development at GC Women University Sialkot.</p>
-          </div>
-        </article>
-
-        <article>
-          <time>2016</time>
-          <div>
-            <h4>Web Developer</h4>
-            <h5>Ayan Group Of Company Lahore</h5>
-            <p>Responsive web development, maintenance, testing and debugging.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-light">
-    <div class="wrap">
-      <p class="section-label">05 / TECHNOLOGY STACK</p>
-      <div class="title-row"><h3>Tools I use to <span>deliver.</span></h3></div>
-      <div class="tech-grid">
-        <span>Oracle NetSuite ERP</span><span>SuiteScript 2.x</span><span>SuiteQL</span><span>Suitelets</span>
-        <span>NetSuite PDF / HTML</span><span>Telerik / TRDP</span><span>Dashboard Reporting</span><span>MRP / ERP Reporting</span>
-        <span>Kendo UI</span><span>ASP.NET Core</span><span>VB.NET / C#</span><span>SQL Server</span>
-        <span>SSRS</span><span>Power BI</span><span>JavaScript / AJAX</span><span>Query Optimization</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <div class="wrap">
-      <p class="section-label">CONTACT</p>
-      <h3>Let’s build better <span>business software.</span></h3>
-      <p class="contact-text">Available for software development, Oracle NetSuite reporting and dashboard opportunities.</p>
-
-      <div class="contact-grid">
-        <a href="mailto:rrashidhussain190@gmail.com"><small>EMAIL</small><b>rrashidhussain190@gmail.com</b></a>
-        <a href="tel:+923024652810"><small>PHONE</small><b>+92 302 4652810</b></a>
-        <div><small>LOCATION</small><b>Sialkot, Punjab, Pakistan</b></div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="wrap footer-wrap">
-    <span class="logo-box small">RH</span>
-    <span>© <span id="year"></span> Rashid Hussain</span>
-    <span>Oracle NetSuite & .NET Developer</span>
-  </div>
-</footer>
-
-<script src="portfolio-v2.js?v=20260905"></script>
+  <script src="script.js"></script>
 </body>
 </html>
