@@ -1,14 +1,21 @@
-Rashid Hussain - Professional Portfolio
+UPDATED OLD-STYLE PORTFOLIO
 
-Files:
-- index.html
-- style.css
-- script.js
-- Rashid_Hussain_CV.pdf
-- assets/images/...
+This version preserves the visual style of your previous website:
+- Navy navbar
+- Full image hero
+- Black moving skills strip
+- Dark About/Services
+- White project cards
+- Resume section
+- Why Choose Me
+- Contact
 
-GitHub Pages:
-Upload the CONTENTS of this folder to the repository root.
-Do not upload the containing folder itself as an extra directory level.
+Updates added:
+- Latest Libermann International / NetSuite experience
+- NetSuite ERP portfolio section
+- Privacy-safe NetSuite screenshots
+- Updated .NET Export application screenshots
+- Current CV
+- Click-to-preview project images
 
-The screenshots in assets/images/netsuite and assets/images/dotnet are privacy-safe portfolio previews.
+Upload the CONTENTS of this folder to your GitHub Pages repository root.
